@@ -37,8 +37,7 @@ int CompDatas(data d1 , data d2)
     else
     {
         return 0;
-    }
-    
+    }  
 }
 
 int main()
