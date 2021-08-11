@@ -43,7 +43,6 @@ int CompDatas(data d1 , data d2)
 int main()
 {
     data d1, d2;
-    int result;
     
     scanf("%d %d %d", &d1.dia, &d1.mes, &d1.ano);
     scanf("%d %d %d", &d2.dia, &d2.mes, &d2.ano);
