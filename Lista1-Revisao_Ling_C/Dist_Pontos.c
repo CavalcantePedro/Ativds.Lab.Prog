@@ -7,14 +7,14 @@ typedef struct
     int y;
 
 } tPonto;
-/*
+
 float Dist(tPonto p1, tPonto p2)
 {
     float result;
     result = sqrt(pow((p1.x - p2.x) ,2) + pow((p1.y - p2.y) , 2));
     return pow(result , 2);
 }
-*/
+
 
 int main()
 {
