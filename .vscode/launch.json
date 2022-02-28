@@ -30,9 +30,9 @@
         ""
       ],
       "stopAtEntry": false,
-      "cwd": "/home/pedrocavalcante/Área de Trabalho/Ativds.Lab.Prog/Lista lp C 03",
+      "cwd": "/home/pedrocavalcante/Área de Trabalho/Ativds.Lab.Prog",
       "environment": [],
-      "program": "/home/pedrocavalcante/Área de Trabalho/Ativds.Lab.Prog/Lista lp C 03/build/Debug/outDebug",
+      "program": "/home/pedrocavalcante/Área de Trabalho/Ativds.Lab.Prog/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
       "miDebuggerPath": "/usr/bin/gdb",
