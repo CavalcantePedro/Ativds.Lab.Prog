@@ -2,6 +2,7 @@
 #include <string.h>
 
 #define TAM_MAX 100
+
 typedef struct 
 {
     char cfp[15];
