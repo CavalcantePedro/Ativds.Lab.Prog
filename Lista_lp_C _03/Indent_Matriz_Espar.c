@@ -4,7 +4,7 @@
 
 int Esparsa(int a[TAM_MAX][TAM_MAX], int m, int n)
 {
-    int totalEle = m*n , prct, qntZero = 0;
+    int prct, qntZero = 0;
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
@@ -15,7 +15,8 @@ int Esparsa(int a[TAM_MAX][TAM_MAX], int m, int n)
             }
         }
     }
-    prct = ((qntZero*100)/totalEle);
+    prct = ((qntZero*100)/(m*n));
+   
     if (prct >= 70)
     {
         return 1;
