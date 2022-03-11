@@ -1,59 +1,96 @@
 #include <stdio.h>
+#include <string.h>
 
 #define TAM_MAX 50
 
 typedef struct 
 {
-    char nome[TAM_MAX];
+    char nome [TAM_MAX];
     int numero;
-    float quantVotos;
+    float quant_votos;
+    float prcntg;
 
-}t_candidato;
+} t_candidato;
 
-void TirarBarraN(char *str){
-    if(str[strlen(str) - 1] == '\n'){
-        str[strlen(str) - 1] = '\0';
+void TirarBarraN(char* str)
+{
+    int i;
+
+    for (i = 0; i < strlen(str); i++)
+    {
+        if(str[i]=='\n')
+        {
+            str[i] = '\0';
+        }
     }
 }
 
 int main()
 {
-    int quantCan, aux =0, votosT = 0, votosN = 0;
-    scanf("%d%*C", &quantCan);
-    t_candidato candidatos[quantCan];
-    
-    for (int i = 0; i < quantCan; i++)
+    int quant_candidatos;
+    float nulo = 0.0, total = 0.0, maiorPrctg = 0.0;
+    scanf("%d%*c", &quant_candidatos);
+    t_candidato candidatos [quant_candidatos];
+
+    for (int i = 0; i < quant_candidatos; i++)
     {
-        fgets(candidatos[i].nome, TAM_MAX, stdin);
-        TirarBarraN(candidatos[i].nome);
         scanf("%d%*c", &candidatos[i].numero);
-        candidatos[i].quantVotos = 0;
+        fgets(candidatos[i].nome, TAM_MAX,stdin); 
+        candidatos[i].quant_votos = 0.0;
     }
+      
     while (1)
     {
-        scanf("%d", &aux);
-        if(aux <= 0)
+        float aux;
+        int aux2 = 0;
+        scanf("%f%*c", &aux);
+        if (aux <= 0.0)
         {
-            for (int i = 0; i < quantCan; i++)
-            {
-                if (aux == candidatos[i].numero)
-                {
-                    candidatos[i].quantVotos++;
-                }
-                else 
-                {
-                    votosN++;
-                }
-            }
+            break;
         }
         else
         {
-            break;
-        } 
-        votosT++;
+            for (int i = 0; i < quant_candidatos; i++)
+            {
+                if (candidatos[i].numero == aux)
+                {
+                    candidatos[i].quant_votos++;
+                    total++;
+                }
+                else
+                {
+                    aux2++;
+                }
+            }
+            if (aux2 >= quant_candidatos)
+            {
+                nulo++;
+                total++;
+                aux2 = 0;
+            }
+            
+        }
     }
-    
-
+   
+    for (int i = 0; i < quant_candidatos; i++)
+    {
+        candidatos[i].prcntg = (candidatos[i].quant_votos*100)/total;
+        if(candidatos[i].prcntg > maiorPrctg)
+        {
+            maiorPrctg = candidatos[i].prcntg;
+        } 
+    }
+    for (int i = 0; i < quant_candidatos; i++)
+    {
+        TirarBarraN(candidatos[i].nome);
+        printf("%.2f - %d - %s", candidatos[i].prcntg,candidatos[i].numero, candidatos[i].nome);
+        if (candidatos[i].prcntg == maiorPrctg)
+        {
+            printf(" VENCEDOR\n");
+        }
+        else printf("\n");
+    }
+    printf("%.2f-Nulos\n", (nulo*100)/total);
 
     return 0;
 }
