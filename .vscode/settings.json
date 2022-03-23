@@ -28,6 +28,8 @@
     "**/.vscode/**"
   ],
   "files.associations": {
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "string": "cpp",
+    "iostream": "cpp"
   }
 }
