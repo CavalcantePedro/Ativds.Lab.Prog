@@ -1,6 +1,5 @@
 #include <iostream>
 #include "Invoice.h"
-#include <stdio.h>
 
 int main()
 {

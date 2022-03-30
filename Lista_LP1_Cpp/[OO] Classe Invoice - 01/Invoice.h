@@ -1,5 +1,5 @@
-//#ifdef INVOICE_H
-#define INVOICE_H
+//#ifdef PESSOA_H
+#define PESSOA_H
 
 #include <string>
 
@@ -13,7 +13,7 @@ class Invoice
         int num;
         std :: string desc;
         int quantComp;
-        double preco;
+        float preco;
 
         float getInvoiceAmount();
         
