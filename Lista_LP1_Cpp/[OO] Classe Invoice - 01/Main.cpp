@@ -33,8 +33,8 @@ int main()
         in2.preco = 0;
     }
 
-    cout << in1.num << "-" << in1.desc << "-" << in1.quantComp << "-" << in1.preco 
-    << "-" << in1.getInvoiceAmount() << endl;
-    cout << in2.num << "-" << in2.desc << "-" << in2.quantComp << "-" << in2.preco 
-    << "-" << in2.getInvoiceAmount() << endl;
+    cout << in1.num << " - " << in1.desc << " - " << in1.quantComp << " - " << in1.preco 
+    << " - " << in1.getInvoiceAmount() << endl;
+    cout << in2.num << " - " << in2.desc << " - " << in2.quantComp << " - " << in2.preco 
+    << " - " << in2.getInvoiceAmount() << endl;
 }

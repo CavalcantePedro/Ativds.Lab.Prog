@@ -36,6 +36,10 @@ int main()
             cout << arr[i].getNome() << ", " << arr[i].getIdade()
              << ", " << arr[i].getTelefone() << endl;    
         }
+        else if(arr[i].getNome().find(busca) == string::npos && i+1 > n) 
+        {
+            cout << "Pessoa não encontrada";
+        }
     }
     
      /*

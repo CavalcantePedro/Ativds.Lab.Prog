@@ -2,9 +2,24 @@
 #include <string>
 #include <iostream>
 
+
 using namespace std;
 
 Invoice :: Invoice(){}
+
+float Invoice :: getInvoiceAmount()
+{
+    return preco*quantComp;
+}
+
+void Invoice :: print()
+{
+    cout << num << " - " <<
+    desc << " - " << quantComp << 
+    " - " << preco 
+    << " - " << getInvoiceAmount() << endl;
+
+}
 
 int Invoice ::getNum()
 {
@@ -36,7 +51,7 @@ void Invoice :: setQuantComp(int quantComp)
     this ->quantComp = quantComp;
 }
 
-float Invoice ::getPeco()
+float Invoice ::getPreco()
 {
     return preco;
 }

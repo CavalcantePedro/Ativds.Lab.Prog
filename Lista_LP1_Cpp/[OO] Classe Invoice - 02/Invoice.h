@@ -15,14 +15,15 @@ class Invoice
         
         int getNum();
         void setNum(int num);
+
         
         std :: string getDesc();
-        void setDesc(string desc);
+        void setDesc(std :: string desc);
         
         int getQuantComp();
         void setQuantComp(int quantComp);
         
-        float getPeco();
+        float getPreco();
         void setPreco(float preco);
 
         
