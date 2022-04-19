@@ -5,27 +5,23 @@ using namespace std;
 class Pessoa
 {
     private:
-    std :: string nome;
+    string nome;
     int idade;
-    std :: string telefone;
+    string telefone;
 
     public:
     //cosntrutores
     Pessoa();
     
-    Pessoa(std :: string nome);
-
-    Pessoa(std :: string nome, int idade, std :: string telefone);
-
     //metodos set e get
-    std :: string getNome();
-    void setNome(std :: string nome);
+    string getNome();
+    void setNome(string nome);
 
     int getIdade();
     void setIdade(int idade);
 
-    std :: string getTelefone();
-    void setTelefone(std :: string teledone);
+    string getTelefone();
+    void setTelefone(string teledone);
 
 
 };

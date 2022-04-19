@@ -7,23 +7,11 @@ using namespace std;
 
 Pessoa :: Pessoa(){}
 
-Pessoa :: Pessoa(std :: string nome)
-{
-    this -> nome = nome;
-}
-
-Pessoa :: Pessoa(std :: string nome, int idade, std :: string telefone)
-{
-    this -> nome = nome;
-    this -> idade = idade;
-    this -> telefone = telefone;
-}
-
-std :: string Pessoa :: getNome()
+string Pessoa :: getNome()
 {
     return nome;
 }
-void Pessoa::setNome(std :: string nome)
+void Pessoa::setNome(string nome)
 {
 
     this -> nome = nome;
@@ -38,11 +26,11 @@ void Pessoa ::setIdade(int idade)
     this -> idade = idade;
 }
 
-std :: string Pessoa :: getTelefone()
+string Pessoa :: getTelefone()
 {
     return telefone;
 }
-void Pessoa::setTelefone(std :: string telefone)
+void Pessoa::setTelefone(string telefone)
 {
     this -> telefone = telefone;
 }

@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    int n, idade;
+    int n, idade, count =0;
     string nome, telefone, busca;
 
     cin >> n;
@@ -20,12 +20,9 @@ int main()
         cin >> idade;
         cin.ignore();
         getline(cin,telefone);
-        arr[i] = Pessoa(nome, idade, telefone);
-        /*
         arr[i].setNome(nome);
         arr[i].setIdade(idade);
         arr[i].setTelefone(telefone);    
-        */
     }
 
     cin >> busca;
@@ -34,19 +31,15 @@ int main()
         if(arr[i].getNome().find(busca) != string::npos) //achou
         {
             cout << arr[i].getNome() << ", " << arr[i].getIdade()
-             << ", " << arr[i].getTelefone() << endl;    
+             << ", " << arr[i].getTelefone() << endl;  
         }
-        else if(arr[i].getNome().find(busca) == string::npos && i+1 > n) 
+        else if(arr[i].getNome().find(busca) == string::npos) 
         {
-            cout << "Pessoa não encontrada";
+            count++;
         }
     }
-    
-     /*
-    for (int i = 0; i < n; i++)
+    if (count == n)
     {
-        cout << arr[i].getNome() << "," << arr[i].getIdade() << "," << arr[i].getTelefone() << endl;
+        cout << "Pessoa não encontrada";
     }
-    */
-
 }
